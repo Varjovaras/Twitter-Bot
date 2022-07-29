@@ -19,17 +19,25 @@ def bot():
     auth.set_access_token(
         access_token, access_secret)
     api = tweepy.API(auth)
+    print(auth)
+    print(api)
 
     # Upload image
-    media = api.media_upload("perstai.jpg")
-    # Post tweet with image
-    tweet = "Perstai"
-    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
-    print(post_result)
+    # media = api.media_upload("perstai.jpg")
+    # # Post tweet with image
+    # tweet = "Perstai"
+    # post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    # print(post_result)
 
 
-schedule.every().friday.at("09:30").do(bot)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-    print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
+def main():
+    schedule.every().friday.at("09:30").do(bot)
+    while True:
+        bot()
+        schedule.run_pending()
+        time.sleep(1)
+        print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
+
+
+if __name__ == "__main__":
+    main()
