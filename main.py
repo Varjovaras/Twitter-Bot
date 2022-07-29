@@ -30,15 +30,10 @@ def bot():
     # print(post_result)
 
 
-def main():
-    print(1234)
-    schedule.every().friday.at("09:30").do(bot)
-    while True:
-        bot()
-        schedule.run_pending()
-        time.sleep(1)
-        print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
-
-
-if __name__ == "__main__":
-    main()
+print(1234)
+schedule.every().friday.at("09:30").do(bot)
+while True:
+    bot()
+    schedule.run_pending()
+    time.sleep(1)
+    print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
