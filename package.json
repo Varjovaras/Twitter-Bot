@@ -1,0 +1,22 @@
+{
+  "name": "twitter-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "discord": "cd discord && npm start",
+    "discord-dev": "cd discord && npm run dev",
+    "twitter": "cd twitter && /usr/bin/python3 /Users/kristjan/Documents/Github/twitter/twitter/bot.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Varjovaras/Twitter-Discord-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Varjovaras/Twitter-Discord-bot/issues"
+  },
+  "homepage": "https://github.com/Varjovaras/Twitter-Discord-bot#readme"
+}
