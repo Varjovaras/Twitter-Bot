@@ -31,6 +31,7 @@ def bot():
 
 
 def main():
+    print(1234)
     schedule.every().friday.at("09:30").do(bot)
     while True:
         bot()
