@@ -28,7 +28,7 @@ def bot():
     print(post_result)
 
 
-schedule.every().friday.at("9:30").do(bot)
+schedule.every().friday.at("09:30").do(bot)
 while True:
     schedule.run_pending()
     time.sleep(1)
