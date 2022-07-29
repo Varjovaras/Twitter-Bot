@@ -13,27 +13,23 @@ def bot():
 
     auth = tweepy.OAuthHandler(
         consumer_key, consumer_secret)
-
     auth.set_access_token(
         access_token, access_secret)
     api = tweepy.API(auth)
-    print(auth)
-    print(api)
 
+    print("Tweeting perstai")
     # Upload image
     media = api.media_upload("perstai.jpg")
     # Post tweet with image
-    tweet = "testi Perstai"
+    tweet = "Perstai"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
     print(post_result)
 
 
 load_dotenv()
 
-print(1234)
-schedule.every().friday.at("11:38").do(bot)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
-#     print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
-bot()
+schedule.every().friday.at("09:38").do(bot)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+    print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
