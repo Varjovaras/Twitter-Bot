@@ -28,7 +28,7 @@ def bot():
 
 load_dotenv()
 
-schedule.every().friday.at("09:38").do(bot)
+schedule.every().friday.at("06:51").do(bot)
 while True:
     schedule.run_pending()
     time.sleep(1)
