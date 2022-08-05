@@ -30,7 +30,7 @@ print("Deployed")
 
 load_dotenv()
 
-schedule.every().friday.at("13:13").do(bot)
+schedule.every().friday.do(bot)
 while True:
     schedule.run_pending()
     time.sleep(1)
