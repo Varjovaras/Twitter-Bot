@@ -30,7 +30,22 @@ print("Deployed")
 
 load_dotenv()
 
-schedule.every().friday.at("13:27").do(bot)
+
+def schedule_testprint(text):
+    print(text)
+    print(time.localtime(time.time()))
+    print(time.asctime(time.localtime(time.time())))
+    print(":)")
+
+
+schedule.every().friday.at("09:30").do(bot)
+schedule.every().friday.at("14:50").do(schedule_testprint("14:50"))
+schedule.every().friday.at("15:50").do(schedule_testprint("15:50"))
+schedule.every().friday.at("16:50").do(schedule_testprint("16:50"))
+schedule.every().friday.at("17:50").do(schedule_testprint("17:50"))
+schedule.every().friday.at("18:50").do(schedule_testprint("18:50"))
+
+
 while True:
     schedule.run_pending()
     time.sleep(1)
