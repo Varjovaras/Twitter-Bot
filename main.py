@@ -38,10 +38,10 @@ print("Deployed")
 load_dotenv()
 
 
-schedule.every().friday.at("11:47").do(bot)
+schedule.every().friday.at("12:16").do(bot)
 
 
 while True:
     schedule.run_pending()
     time.sleep(1)
-    # print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
+    print("\nGMT: "+time.strftime("%a, %d %b %Y %I:%M:%S %p %Z", time.gmtime()))
