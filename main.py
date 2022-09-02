@@ -38,7 +38,7 @@ print("Deployed")
 load_dotenv()
 
 
-schedule.every().friday.at("12:16").do(bot)
+schedule.every().friday.at("09:46").do(bot)
 
 
 while True:
